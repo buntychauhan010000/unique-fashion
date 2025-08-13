@@ -24,11 +24,9 @@ function NavBar() {
           height={58}
           src={logo}
           alt="Logo"
-         
           data-aos="zoom-in"
           data-aos-delay="100"
           data-aos-duration="600"
-          
         />
 
         {/* Desktop Menu */}
@@ -84,7 +82,9 @@ function NavBar() {
             className="size-6 text-primary cursor-pointer"
             onClick={() => setIsOpen(false)}
           />
-          <PrimaryButton label="Contact Us" onClick={() => setIsOpen(false)} />
+          <div onClick={() => setIsOpen(false)}>
+            <PrimaryButton label="Contact Us" href={"bookNow"} />
+          </div>
         </div>
       </div>
     </nav>

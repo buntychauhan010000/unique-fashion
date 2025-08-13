@@ -8,7 +8,7 @@ import Image from "next/image";
 function SareeShowcaseWithHero() {
   return (
     <div
-      className="flex flex-col md:flex-row justify-between rounded-3xl mx-auto gap-6 md:gap-3 lg:gap-6 mt-5 py-5 xs:py-10 lg:py-16"
+      className="flex flex-col md:flex-row justify-between  rounded-3xl mx-auto gap-6 md:gap-3 lg:gap-6 mt-5 py-5 xs:py-10 lg:py-16"
       data-aos="fade-up"
     >
       {/* Left Section - Image */}
@@ -39,7 +39,7 @@ function SareeShowcaseWithHero() {
           {sareeData.map((saree, index) => (
             <div
               key={index}
-              className="flex flex-col justify-between items-center"
+              className="flex flex-col justify-between items-center "
             >
               <div className="max-w-24 sm:max-w-28 max-h-36 sm:max-h-40 overflow-hidden rounded-full">
                 <Image
