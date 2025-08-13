@@ -29,7 +29,7 @@ function Saree() {
           </p>
           <div className="flex flex-wrap justify-center md:justify-start gap-4">
             <PrimaryButton label="Book Now" href={"bookNow"}  />
-            <PrimaryButton label="Explore" />
+            <PrimaryButton label="Explore" href={"shop"} />
           </div>
         </motion.div>
 

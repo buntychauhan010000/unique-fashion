@@ -143,7 +143,7 @@ export const footerLinks = {
     { name: "Shop", url: "/shop" },
     { name: "Services", url: "/services" },
     { name: "FAQ", url: "/faq" },
-    { name: "Blog", url: "/blog" },
+
   ],
   services: [
     { name: "Privacy Policy", url: "/privacy" },

@@ -57,7 +57,7 @@ function SareeShowcaseWithHero() {
 
         {/* Learn More Button */}
         <div data-aos="fade-up" data-aos-delay="400">
-          <PrimaryButton label={"Learn More"} />
+          <PrimaryButton label={"Learn More"} href={"shop"} />
         </div>
       </div>
     </div>

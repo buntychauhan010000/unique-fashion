@@ -45,8 +45,8 @@ function SpeakStyle() {
             confident, graceful, and truly herself.
           </p>
           <div className="flex flex-wrap justify-center md:justify-start gap-4">
-            <PrimaryButton label="Book Now" />
-            <PrimaryButton label="Explore" />
+            <PrimaryButton label="Book Now" href={"bookNow"} />
+            <PrimaryButton label="Explore" href={"shop"} />
           </div>
         </motion.div>
       </div>

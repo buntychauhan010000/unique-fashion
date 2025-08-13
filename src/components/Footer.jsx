@@ -65,8 +65,8 @@ function Footer() {
               <h3 className="text-lg font-semibold mb-3">Contact us</h3>
               <div className="flex items-center gap-2 text-gray-400">
                 <FiPhone className="text-xl" />
-                <a href="tel:2129978800" className="hover:text-gray-600">
-                  212-997-8800
+                <a href="tel:9416085508" className="hover:text-gray-600">
+                  94160 85508
                 </a>
               </div>
             </div>

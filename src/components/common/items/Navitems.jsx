@@ -14,7 +14,7 @@ function Navitems({ direction = "row", onClick }) {
           <Link
             href={link.url}
             onClick={onClick}
-            className="block w-full py-2 px-4 nav-link relative text-gray-800 hover:text-[#AD544E] transition-all duration-300"
+            className="block w-full py-2 md:py-0  px-4 md:px-0 nav-link relative text-gray-800 hover:text-[#AD544E] transition-all duration-300"
           >
             {link.name}
           </Link>

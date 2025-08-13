@@ -49,7 +49,7 @@ export default function BookNowPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+    <div className="md:min-h-screen py-20 md:py-0  flex items-center justify-center bg-gray-100">
       <Toaster position="top-right" reverseOrder={false} />
       <form
         onSubmit={handleSubmit}
