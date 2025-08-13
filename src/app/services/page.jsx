@@ -7,7 +7,6 @@ import {
   FaHandSparkles,
   FaPalette,
   FaShoppingBag,
-
 } from "react-icons/fa";
 import { FaCut } from "react-icons/fa";
 
@@ -58,10 +57,16 @@ export default function ServicesSection() {
   return (
     <section className="bg-gray-50 py-16" id="services">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-primary mb-4">
+        <h2
+          className="text-3xl md:text-4xl font-bold text-center text-primary mb-4"
+          style={{ fontFamily: "var(--font-Montserrat)" }}
+        >
           Our Services
         </h2>
-        <p className="text-center text-gray-600 max-w-2xl mx-auto mb-12">
+        <p
+          className="text-center text-gray-600 max-w-2xl mx-auto mb-12"
+          style={{ fontFamily: "var(--font-Kaisei)" }}
+        >
           Discover our range of fashion services designed to make you look and
           feel your absolute best.
         </p>
@@ -73,10 +78,21 @@ export default function ServicesSection() {
               className="bg-white rounded-xl shadow-md p-6 text-center transform transition duration-300 hover:-translate-y-2 hover:shadow-xl"
               data-aos="fade-up"
               data-aos-delay={index * 80}
+              style={{ fontFamily: "var(--font-Abhaya)" }}
             >
               <div className="mb-4 flex justify-center">{service.icon}</div>
-              <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
-              <p className="text-gray-600 text-sm">{service.desc}</p>
+              <h3
+                className="text-lg font-semibold mb-2"
+                style={{ fontFamily: "var(--font-Montserrat)" }}
+              >
+                {service.title}
+              </h3>
+              <p
+                className="text-gray-600 text-sm"
+                style={{ fontFamily: "var(--font-Kaisei)" }}
+              >
+                {service.desc}
+              </p>
             </div>
           ))}
         </div>

@@ -38,7 +38,7 @@ function SpeakStyle() {
           <h1 className="font-bold text-4xl lg:text-5xl">
             Sarees That Speak Style
           </h1>
-          <p className="text-sm sm:text-base text-gray-500 max-w-[520px] mx-auto lg:mx-0">
+          <p className="text-sm sm:text-base text-gray-500 max-w-[520px] mx-auto lg:mx-0 font-Abhaya">
             We celebrate the beauty of Indian tradition through elegant,
             handcrafted sarees. Each piece in our collection blends timeless
             designs with quality fabrics — made to make every woman feel

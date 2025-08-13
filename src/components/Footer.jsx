@@ -5,10 +5,12 @@ import logo from "../../public/assets/img/logo.png";
 import { footerLinks } from "./common/Helper";
 import Image from "next/image";
 
-
 function Footer() {
   return (
-    <footer className="bg-black text-white py-12">
+    <footer
+      className="bg-black text-white py-12"
+      style={{ fontFamily: "var(--font-Montserrat)" }}
+    >
       <div className="container mx-auto px-4">
         {/* Grid wrapper */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
@@ -17,7 +19,10 @@ function Footer() {
             <div className="flex items-center gap-2 mb-4">
               <Image src={logo} alt="Unique Fashion" className="h-10" />
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed mb-4">
+            <p
+              className="text-gray-400 text-sm leading-relaxed mb-4"
+              style={{ fontFamily: "var(--font-Kaisei)" }}
+            >
               Celebrate the timeless beauty of sarees that blend cultural
               richness with modern grace. Every piece in our collection is
               crafted to make you feel confident,
@@ -30,11 +35,16 @@ function Footer() {
             </a>
           </div>
 
-          {/* Links Section - Mobile par combine, MD par alag */}
+          {/* Links Section */}
           <div className="order-2 sm:grid-cols-3 md:col-span-3 grid grid-cols-2 md:grid-cols-3 gap-8">
             {/* About Website */}
             <div>
-              <h3 className="text-lg font-semibold mb-3">About website</h3>
+              <h3
+                className="text-lg font-semibold mb-3"
+                style={{ fontFamily: "var(--font-Abhaya)" }}
+              >
+                About website
+              </h3>
               <ul className="space-y-2 text-gray-400 text-sm">
                 {footerLinks.about.map((link, index) => (
                   <li key={index}>
@@ -48,7 +58,12 @@ function Footer() {
 
             {/* Services */}
             <div>
-              <h3 className="text-lg font-semibold mb-3">Services</h3>
+              <h3
+                className="text-lg font-semibold mb-3"
+                style={{ fontFamily: "var(--font-Abhaya)" }}
+              >
+                Services
+              </h3>
               <ul className="space-y-2 text-gray-400 text-sm">
                 {footerLinks.services.map((link, index) => (
                   <li key={index}>
@@ -62,10 +77,19 @@ function Footer() {
 
             {/* Contact Us */}
             <div>
-              <h3 className="text-lg font-semibold mb-3">Contact us</h3>
+              <h3
+                className="text-lg font-semibold mb-3"
+                style={{ fontFamily: "var(--font-Abhaya)" }}
+              >
+                Contact us
+              </h3>
               <div className="flex items-center gap-2 text-gray-400">
                 <FiPhone className="text-xl" />
-                <a href="tel:9416085508" className="hover:text-gray-600">
+                <a
+                  href="tel:9416085508"
+                  className="hover:text-gray-600"
+                  style={{ fontFamily: "var(--font-Montserrat)" }}
+                >
                   94160 85508
                 </a>
               </div>
@@ -74,7 +98,10 @@ function Footer() {
         </div>
 
         {/* Bottom Border */}
-        <div className="border-t border-gray-700 mt-8 pt-4 text-center text-gray-500 text-sm">
+        <div
+          className="border-t border-gray-700 mt-8 pt-4 text-center text-gray-500 text-sm"
+          style={{ fontFamily: "var(--font-Montserrat)" }}
+        >
           © {new Date().getFullYear()} Unique Fashion. All rights reserved.
         </div>
       </div>
