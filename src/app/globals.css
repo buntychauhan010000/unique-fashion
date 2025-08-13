@@ -1,7 +1,6 @@
 @import "tailwindcss";
 
-@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Kaisei+Tokumin&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
   @apply font-[Abhaya];
@@ -9,8 +8,10 @@ body {
 
 /* Theme variables */
 @theme {
-  --font-Abhaya: "Abhaya Libre", serif;
-  --font-Kaisei: "Kaisei Tokumin", serif;
+  --font-Abhaya: "Roboto",
+    sans-serif;
+  --font-Kaisei: "Libertinus Serif",
+    serif;
   --font-Montserrat: "Montserrat", sans-serif;
 
   --color-primary: #933F3A;
