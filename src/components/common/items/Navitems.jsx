@@ -13,8 +13,8 @@ function Navitems({ direction = "row", onClick }) {
         <li key={index}>
           <Link
             href={link.url}
-            onClick={onClick} // <-- yaha add kiya
-            className="nav-link relative text-gray-800 hover:text-[#AD544E] transition-all duration-300"
+            onClick={onClick}
+            className="block w-full py-2 px-4 nav-link relative text-gray-800 hover:text-[#AD544E] transition-all duration-300"
           >
             {link.name}
           </Link>
