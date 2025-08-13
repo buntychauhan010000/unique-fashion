@@ -60,7 +60,7 @@ function AsSeenIn() {
       </Swiper>
 
       {/* Clients Slider */}
-      <div className="py-12 px-4 text-center">
+      <div className="py-12  text-center">
         <Swiper
           slidesPerView={5}
           spaceBetween={30}
