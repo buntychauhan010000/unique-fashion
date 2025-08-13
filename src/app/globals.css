@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@400;500;600;700;800&family=Kaisei+Tokumin&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+
+body {
+  @apply font-[Abhaya];
+}
+
+/* Theme variables */
+@theme {
+  --font-Abhaya: "Abhaya Libre", serif;
+  --font-Kaisei: "Kaisei Tokumin", serif;
+  --font-Montserrat: "Montserrat", sans-serif;
+
+  --color-primary: #933F3A;
+  --color-cream: #F8F5F0;
+
+  --breakpoint-xs: 480px;
+}
+
+/* Navigation link */
+.nav-link {
+  @apply text-base font-medium text-gray-800 relative transition-colors duration-300 ease-in-out min-w-[50px];
+}
+
+.nav-link:hover {
+  @apply text-[#AD544E];
+}
+
+.nav-link::after {
+  content: "";
+  @apply absolute left-0 -bottom-1 w-0 h-[2px] bg-[#AD544E] transition-all duration-300;
+}
+
+.nav-link:hover::after {
+  @apply w-full;
+}
+
+/* Background container */
+.bg-container {
+  @apply bg-top bg-cover h-screen;
+  background-image: url('../../public/assets/img/bgimg.png');
+}
+
+.custom-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+
+}
