@@ -6,18 +6,18 @@ const Page = () => {
   return (
     <div className="bg-[#fff8f5]">
       {/* Top Section */}
-      <section className="container mx-auto px-3  py-16">
-        <div className="grid md:grid-cols-2 gap-12 items-center ">
+      <section className="container mx-auto px-4 py-16">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-12">
           {/* Text */}
-          <div>
+          <div className="flex-1">
             <h1
-              className="text-4xl md:text-5xl font-bold mb-6 "
+              className="text-4xl md:text-5xl font-bold mb-6"
               style={{ fontFamily: "var(--font-Abhaya)" }}
             >
               About Us
             </h1>
             <p
-              className="text-lg text-gray-500 leading-relaxed mb-6"
+              className="text-lg text-gray-500 leading-relaxed mb-6 text-justify"
               style={{ fontFamily: "var(--font-Montserrat)" }}
             >
               At <span className="font-bold">Unique Fashion</span>, we believe
@@ -28,7 +28,7 @@ const Page = () => {
               graceful, and beautiful.
             </p>
             <p
-              className="text-lg text-gray-500 leading-relaxed"
+              className="text-lg text-gray-500 leading-relaxed text-justify"
               style={{ fontFamily: "var(--font-Montserrat)" }}
             >
               From vibrant silks to delicate cottons, every saree in our
@@ -39,55 +39,42 @@ const Page = () => {
           </div>
 
           {/* Image */}
-          <Image src={heroimg} alt="About Us Saree" />
+          <div className="flex-1 flex justify-center">
+            <Image
+              src={heroimg}
+              alt="About Us Saree"
+              className="rounded-lg shadow-lg object-cover"
+            />
+          </div>
         </div>
       </section>
 
       {/* Stats Section */}
       <section className="bg-white py-12">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-          <div>
-            <h2
-              className="text-4xl font-bold text-primary"
-              style={{ fontFamily: "var(--font-Abhaya)" }}
+          {[
+            { number: "20K+", text: "Happy Clients" },
+            { number: "50+", text: "Skilled Staff" },
+            { number: "100%", text: "Quality Assurance" },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
             >
-              20K+
-            </h2>
-            <p
-              className="text-lg text-gray-500"
-              style={{ fontFamily: "var(--font-Montserrat)" }}
-            >
-              Happy Clients
-            </p>
-          </div>
-          <div>
-            <h2
-              className="text-4xl font-bold text-primary"
-              style={{ fontFamily: "var(--font-Abhaya)" }}
-            >
-              50+
-            </h2>
-            <p
-              className="text-lg text-gray-500"
-              style={{ fontFamily: "var(--font-Montserrat)" }}
-            >
-              Skilled Staff
-            </p>
-          </div>
-          <div>
-            <h2
-              className="text-4xl font-bold text-primary"
-              style={{ fontFamily: "var(--font-Abhaya)" }}
-            >
-              100%
-            </h2>
-            <p
-              className="text-lg text-gray-500"
-              style={{ fontFamily: "var(--font-Montserrat)" }}
-            >
-              Quality Assurance
-            </p>
-          </div>
+              <h2
+                className="text-4xl font-bold text-primary"
+                style={{ fontFamily: "var(--font-Abhaya)" }}
+              >
+                {item.number}
+              </h2>
+              <p
+                className="text-lg text-gray-500"
+                style={{ fontFamily: "var(--font-Montserrat)" }}
+              >
+                {item.text}
+              </p>
+            </div>
+          ))}
         </div>
       </section>
 
@@ -107,7 +94,7 @@ const Page = () => {
           celebrate your beauty and individuality. Join our journey of style,
           tradition, and grace.
         </p>
-        <button className="bg-white text-primary px-6 py-3 rounded-full font-semibold hover:bg-[#f5d1c3] transition-all duration-300">
+        <button className="bg-white text-primary px-6 py-3 rounded-full font-semibold hover:bg-[#f5d1c3] hover:scale-105 transition-all duration-300 shadow-md">
           Explore Collection
         </button>
       </section>
