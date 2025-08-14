@@ -1,23 +1,55 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { useParams } from "next/navigation";
+import { useParams, useSearchParams } from "next/navigation";
 import Link from "next/link";
 
 export default function ProductDetails() {
-  const { id } = useParams(); // dynamic route ka id
+  const { id } = useParams();
+  const searchParams = useSearchParams();
+  const type = searchParams.get("type"); // saree / fake
+
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
+useEffect(() => {
+  if (!id || !type) return;
 
-  useEffect(() => {
-    if (id) {
-      fetch(`https://fakestoreapi.com/products/${id}`)
-        .then((res) => res.json())
-        .then((data) => {
-          setProduct(data);
-          setLoading(false);
-        });
+  const dataParam = searchParams.get("data");
+  if (dataParam) {
+    // Agar data query me already mila hai (Saree API case), API call ki zaroorat nahi
+    try {
+      const parsedData = JSON.parse(decodeURIComponent(dataParam));
+      setProduct(parsedData);
+      setLoading(false);
+      return;
+    } catch (err) {
+      console.error("Error parsing product data:", err);
     }
-  }, [id]);
+  }
+
+  // FakeStore API ka case me API call
+  let apiUrl = "";
+  if (type === "fake") {
+    apiUrl = `https://fakestoreapi.com/products/${id}`;
+  }
+
+  if (apiUrl) {
+    fetch(apiUrl)
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to fetch");
+        return res.json();
+      })
+      .then((data) => {
+        setProduct(data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error(err);
+        setProduct(null);
+        setLoading(false);
+      });
+  }
+}, [id, type]);
+
 
   if (loading) {
     return (
@@ -36,7 +68,7 @@ export default function ProductDetails() {
   }
 
   return (
-    <div className="bg-white min-h-screen  container mx-auto px-3 px-6 py-10">
+    <div className="bg-white min-h-screen container mx-auto px-3 px-6 py-10">
       <Link href="/shop" className="text-primary underline mb-6 inline-block">
         ← Back to Products
       </Link>
